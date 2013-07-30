@@ -1,0 +1,81 @@
+@bodyBackgroundColor:#fff;  
+@bodyFontSize: 15px;  
+@fontFamily:“Times New Roman”,Georgia,Serif;  
+@textColor: #C0FE13;  
+@textHighlight: #00215C;  
+@fontFamily: Helvetica, Arial, sans-serif;  
+@fontSize: 15px;  
+@lineHeight: 25px;  
+  
+@introSize: 20px;  
+@introLineHeight: 24px;  
+  
+  
+p {  
+    color: @textColor;  
+    font-family: @fontFamily;  
+    font-size: @fontSize;  
+    line-height: @lineHeight;  
+  
+    .introduction {       
+        font-size: @introSize;  
+        line-height: @introLineHeight;  
+    }   
+  
+    .highlight {  
+        color: @textHighlight;  
+        font-weight: bold;  
+    }   
+  
+}   
+
+body{  
+    color: saturate(#000, 5%);
+    background-color: spin(lighten(#000, 25%), 8);
+    font-size:@bodyFontSize;  
+    font-family:@fontFamily;  
+} 
+
+.bordered {  
+  border-top: dotted 1px black;  
+  border-bottom: solid 2px black;  
+} 
+
+#menu a {  
+  color: #111;  
+  .bordered;  
+}  
+.post a {  
+  color: red;  
+  .bordered;  
+}
+
+.border-radius(@radius: 6px) {  
+    -webkit-border-radius:  @radius;  
+    -moz-border-radius: @radius;  
+    border-radius:      @radius;  
+}  
+  
+.header {  
+    .border-radius;  
+}  
+  
+.sidebar {  
+    .border-radius(12px);  
+} 
+
+// LESS Functions
+
+@the-border: 1px;
+@base-color: #111;
+@red:        #842210;
+
+#header {
+  color: (@base-color * 3);
+  border-left: @the-border;
+  border-right: (@the-border * 2);
+}
+#footer {
+  color: (@base-color + #003300);
+  border-color: desaturate(@red, 10%);
+}
